@@ -1,0 +1,76 @@
+{
+  "eval_set_id": "Weather_evaluation",
+  "name": "Weather_evaluation",
+  "eval_cases": [
+    {
+      "eval_id": "Taipei_weather",
+      "conversation": [
+        {
+          "invocation_id": "e-d50d1be3-08ce-4e25-92b7-07f565e86ad8",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Taipei"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "The weather in Taipei is sunny."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "thought_signature": "Cu8BAdHtim9zOhcKt7DQ75arRLBbwZcEozZ7UGRVskOg2mww5pp012JeYduD4UIOk7wrm-FStDQ_8lK3n5uG87eTSu728JBduHPAXdGpNKEA78NXwRYx6iRgI1cdsodCiDHBUOnksi3TBwu_YqW4p-ClOHQFa7CG1bg0rXwSuO5f38FChmXIHwGZ7RmVcorDMJMRLo0SvO2-SV43H_GydwyjUdvmbxi_KUNUdwni9JLwsV2RFqIaV3uhc6mjLSKXhShFxp1jKDlsmE5gEvNLUTg1ZncT3ZroNcD7Le-Z9S5lZw-ngTDhJ_tZss_LDRNWvAU=",
+                      "function_call": {
+                        "id": "adk-2c35f6b0-da08-4c67-a96d-c61fd9bee29e",
+                        "args": {
+                          "city_name": "Taipei"
+                        },
+                        "name": "query_weather"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-2c35f6b0-da08-4c67-a96d-c61fd9bee29e",
+                        "name": "query_weather",
+                        "response": {
+                          "result": "The Taipei of the weather is: sunny."
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1760501885.317633
+        }
+      ],
+      "session_input": {
+        "app_name": "weather_agent_en",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1760501895.1242728
+    }
+  ],
+  "creation_timestamp": 1760501854.549361
+}

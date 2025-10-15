@@ -1,0 +1,76 @@
+{
+  "eval_set_id": "weather_evaluation_zhtw",
+  "name": "weather_evaluation_zhtw",
+  "eval_cases": [
+    {
+      "eval_id": "Taipei_weather",
+      "conversation": [
+        {
+          "invocation_id": "e-7b7a1f0e-0311-420b-8386-7c18ff1ee1df",
+          "user_content": {
+            "parts": [
+              {
+                "text": "台北"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "台北 的天氣是：陰天。"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "thought_signature": "Cs4BAdHtim-lhG7Qp53BrlEhaX1ATmrYuU3nhxEf6VHbCazKF66DlUfWFaME8xAwCm900eknpNsNDqgPGdnx_CWDJEzOMt_YwBBUn9sKY9QUWlpH5qZYp-l4bsLtU-oqci_1aZaoeibDDEkSKoR3xdgf5NU-4b9k-V_rOM2ktHhtJEE0xVXdsKnc4A3RqpJyjYMA_fT0BoqBSGt0r_21TQTIszLQW4hg6yy1_LxbSjWC4xSZw_vJuXykLrSRuTzzIkKadQztEyOu_VMEKlwth3E=",
+                      "function_call": {
+                        "id": "adk-89fceef5-2bbe-42f5-a9b4-03c268805158",
+                        "args": {
+                          "city_name": "台北"
+                        },
+                        "name": "query_weather"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "weather_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-89fceef5-2bbe-42f5-a9b4-03c268805158",
+                        "name": "query_weather",
+                        "response": {
+                          "result": "台北 的天氣是：陰天。"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1760503524.51053
+        }
+      ],
+      "session_input": {
+        "app_name": "weather_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1760503535.5746062
+    }
+  ],
+  "creation_timestamp": 1760503518.3684218
+}
