@@ -75,6 +75,26 @@ The core of this project is to demonstrate the evaluation process. You can use t
     adk eval weather_agent_en/ weather_agent_en/Weather_evaluation.evalset.json
     ```
 
+### Running Tests with Pytest
+
+In addition to running evaluations from the command line, you can also integrate them into your testing workflow using `pytest`. This project includes a test file that demonstrates how to run evaluations programmatically.
+
+**Prerequisites**:
+
+First, install `pytest` and `pytest-asyncio`:
+```bash
+pip install pytest pytest-asyncio
+```
+
+**Running the Tests**:
+
+Execute the following command in the project root directory:
+```bash
+pytest
+```
+
+Pytest will automatically discover and run the tests defined in `tests/test_agent_evaluation.py`, which evaluate both the English and Traditional Chinese agents against their respective evaluation sets. This is useful for integrating agent evaluation into CI/CD pipelines.
+
 ### Viewing Evaluation Results
 
 After the evaluation is complete, detailed JSON reports are automatically saved in the `.adk/eval_history/` directory of each agent. You can review these files to analyze the agent's tool usage, responses, and whether they meet expectations.

@@ -75,6 +75,26 @@
     adk eval weather_agent_en/ weather_agent_en/Weather_evaluation.evalset.json
     ```
 
+### 使用 Pytest 執行測試
+
+除了透過命令列執行評估，您也可以使用 `pytest` 將評估整合到您的測試流程中。本專案包含一個測試檔案，示範如何以程式化的方式執行評估。
+
+**前置需求**:
+
+首先，安裝 `pytest` 與 `pytest-asyncio`：
+```bash
+pip install pytest pytest-asyncio
+```
+
+**執行測試**:
+
+在專案根目錄下執行以下命令：
+```bash
+pytest
+```
+
+Pytest 會自動尋找並執行 `tests/test_agent_evaluation.py` 中定義的測試，這會分別對英文及繁體中文智慧體進行評估。這對於將智慧體評估整合到 CI/CD 管線中非常有用。
+
 ### 查看評估結果
 
 評估完成後，詳細的 JSON 報告會自動儲存在各智慧體目錄下的 `.adk/eval_history/` 中。您可以檢視這些檔案來分析智慧體的工具使用情況、回覆內容以及是否符合預期。
